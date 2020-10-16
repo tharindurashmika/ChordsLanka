@@ -147,33 +147,28 @@
                   <div class="u-form u-form-1">
                     <form action="https://nicepage.com/editor/Forms/Process" method="POST" class="u-clearfix u-form-spacing-30 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form">
                       <div class="u-form-group u-form-partition-factor-2 u-form-group-1">
-                        <label for="email-319a" class="u-label u-text-body-alt-color u-label-1">Email</label>
-                        <input type="text" placeholder="Song Name" id="email-319a" name="name" class="u-input u-input-rectangle u-white" required="required">
+                        <input type="text" placeholder="Song Name" id="song-319a" name="name" class="u-input u-input-rectangle u-white" required="required">
                       </div>
                       <div class="u-form-group u-form-name u-form-partition-factor-2 u-form-group-2">
                         <label for="name-319a" class="u-form-control-hidden u-label u-text-body-alt-color u-label-2"></label>
                         <input type="text" placeholder="Artists" id="name-319a" name="artist" class="u-input u-input-rectangle u-white" required="">
                       </div>
                       <div class="u-form-address u-form-group u-form-group-3">
-                        <label for="address-452f" class="u-form-control-hidden u-label u-text-body-alt-color u-label-3"></label>
-                        <input type="text" placeholder="Lyrics" id="address-452f" name="lyrics" class="u-input u-input-rectangle u-white" required="">
+                        <input type="text" placeholder="Lyrics" id="lyrics-452f" name="lyrics" class="u-input u-input-rectangle u-white" required="">
                       </div>
                       <div class="u-form-group u-form-group-4">
-                        <label for="text-8e8f" class="u-form-control-hidden u-label u-text-body-alt-color u-label-4"></label>
-                        <input type="text" placeholder="Musics" id="text-8e8f" name="text" class="u-input u-input-rectangle u-white" required="required">
+                        <input type="text" placeholder="Musics" id="music-8e8f" name="text" class="u-input u-input-rectangle u-white" required="required">
                       </div>
                       <div class="u-form-checkbox u-form-group u-form-group-5">
                         <input type="checkbox" id="checkbox-a545" name="checkbox" value="On" required="required">
                         <label for="checkbox-a545" class="u-label u-text-body-alt-color u-label-5">Do you have lyrics copy</label>
                       </div>
                       <div class="u-form-group u-form-group-6">
-                        <label for="text-baa2" class="u-form-control-hidden u-label u-text-body-alt-color u-label-6"></label>
                         <input type="File" placeholder="Attach lyrics file" id="text-baa2" name="text-1"  required="required">
                       </div>
                       <div class="u-align-left u-form-group u-form-submit u-form-group-7">
-                        <a href="https://nicepage.com" class="u-btn u-btn-submit u-button-style u-white u-btn-1">Submit</a>
-                        <input type="submit" value="submit" class="u-form-control-hidden">
-                      </div>
+                          <button class="bg-dark" type="submit" onclick="validation()">Submit</button>
+                        </div>
                       <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
                       <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
                       <input type="hidden" value="" name="recaptchaResponse">
@@ -239,7 +234,23 @@
     <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
     <script type='text/javascript' src='js/custom.js'></script>
     
-   
+   <script type="text/javascript">
+      function validation()
+       {
+           var song=document.getElementById('song-319a').value;
+           var artist=document.getElementById('name-319a').value;
+           var lyrics=document.getElementById('lyrics-452f').value;
+           var music=document.getElementById('music-8e8f').value;
+           
+           if(song!=null & artist!=null & lyrics!=null & music!=null){
+               swal("Thanks for the Request" ,"Success");
+           }else{
+               sweetAlert("Oops..","Something you have missed","check it again");.value
+           }
+
+           }
+      
+      </script>
     
   </body>
 </html>
