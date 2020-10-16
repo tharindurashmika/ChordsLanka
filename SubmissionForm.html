@@ -86,8 +86,20 @@
                     alert("E-mail is not in correct format");
                 }
             }
+           
+
+function myFunction1() {
+  var txt;
+  if (confirm("Are You Sure!")) {
+    txt = "Successfully Clear";
+  } else {
+    txt = "Unsuccessfully Clear";
+  }
+  document.getElementById("demo1").innerHTML = txt;
+}
 
         </script>
+        
         <div style="background-image: url('images/u6.jpg');" "background-size: auto;">
         <div class="container mt-5"> 
         
@@ -100,17 +112,17 @@
         <p>4.Tablatures must have the following formats.
         <p>5.Intros,interludes and solos are welcomed.</h5>
             <br>
-            <form action="" >
+            <form action="" style="font-size: 20px" >
                 <div style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif"
       "font-size:50px"> 
   <div class="form-group">
-    <label for="formGroupExampleInput">Song title</label>
+    <label for="formGroupExampleInput" >Song title</label>
     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Song name">
   </div>
 
    
 
-  <div class="form-group">
+  <div class="form-group" >
     
     <label for="validationServer01">Artist</label>
     <br>
@@ -185,12 +197,12 @@
   </div>
 <br>
 <br>
-<div class="col-md-6mb-4">
-  <button class="btn btn-outline-primary" onclick=" validateEmail('login-username');"type="submit">Submit </button>
+<div class="col-md-6mb-4" id="demo">
+  <button class="btn btn-outline-primary" onclick="validateEmail('login-username');" type="submit">Submit </button>
  
-  <button type="reset" class="btn btn-outline-primary" >Reset </button>
-    
-</div>
+  <button  onclick="myFunction1();" type="reset" class="btn btn-outline-primary"  >Reset </button>
+   </div> 
+
 </div>
 </form>
 
@@ -208,7 +220,7 @@
                 </figure>
 
                 <nav class="footer-navigation">
-                   <ul class="flex flex-wrap justify-content-center align-items-center">
+                    <ul class="flex flex-wrap justify-content-center align-items-center">
                         <li><a href="Home.html">Home</a></li>
                         <li><a href="Comment.html">Comment</a></li>
                         <li><a href="contributed.html">Contribution</a></li>
